@@ -20,7 +20,7 @@ function createPost(){
           image
       };
       // save the post
-      let response = await fetch('https://nextjs-blog-app-pi.vercel.app/api/posts', {
+      let response = await fetch('/api/posts', {
           method: 'POST',
           body: JSON.stringify(post),
       });
@@ -42,7 +42,7 @@ function createPost(){
         bodyFormData.append('file', file);
         try {
          setLoading(true)
-          const { data } = await axios.post('https://nextjs-blog-app-pi.vercel.app/api/upload', bodyFormData, {
+          const { data } = await axios.post('/api/upload', bodyFormData, {
             headers: {
               'Content-Type': 'multipart/form-data',
             },

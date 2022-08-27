@@ -18,7 +18,7 @@ function login() {
             password
         };
         // save the post
-        let response = await fetch('https://nextjs-blog-app-pi.vercel.app/api/login', {
+        let response = await fetch('/api/login', {
             method: 'POST',
             body: JSON.stringify(user),
         });

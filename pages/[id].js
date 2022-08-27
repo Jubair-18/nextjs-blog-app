@@ -14,7 +14,7 @@ function blog() {
         setDeleting(true);
         try {
             // Delete post
-            await fetch('https://nextjs-blog-app-pi.vercel.app/api/posts', {
+            await fetch('/api/posts', {
                 method: 'DELETE',
                 body: postId,
             });
@@ -31,7 +31,7 @@ function blog() {
   useLayoutEffect(() => {
       const fetchPost = async () => {
         try {
-          const  {data}  = await axios.get(`https://nextjs-blog-app-pi.vercel.app/api/${pid}`);
+          const  {data}  = await axios.get(`/api/${pid}`);
           setPost(data.data)
         } catch (err) {
          alert(err);
