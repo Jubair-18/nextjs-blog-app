@@ -26,5 +26,9 @@ module.exports = {
   }
 };
 
+module.exports = {
+  basePath: 'https://nextjs-blog-dr6iaxkaf-jubair-18.vercel.app',
+}
+
 module.exports = nextConfig
 
