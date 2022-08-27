@@ -11,7 +11,7 @@ function Cards() {
         const fetchPost = async () => {
           try {
             setLoading(true);
-            const  { data }   = await axios.get(`/api/posts`)
+            const  { data }   = await axios.get(`https://nextjs-blog-app-pi.vercel.app/api/posts`)
             setPosts(data.message);
             setLoading(false);
 
