@@ -16,7 +16,7 @@ function Cards() {
             setLoading(false);
 
           } catch (err) {
-           alert(err);
+           alert(err.response.data);
           }
         }
         fetchPost()
