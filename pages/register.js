@@ -18,9 +18,10 @@ function register(){
             password
         };
         // save the post
-        let response = await fetch('/api/register', {
+        let response = await fetch('https://nextjs-blog-rarp2h943-jubair-18.vercel.app/api/register', {
             method: 'POST',
             body: JSON.stringify(user),
+            headers:{"Content-Type" : "application/json"}
         });
   
         // get the data

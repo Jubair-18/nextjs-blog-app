@@ -14,9 +14,10 @@ function blog() {
         setDeleting(true);
         try {
             // Delete post
-            await fetch('/api/posts', {
+            await fetch('https://nextjs-blog-rarp2h943-jubair-18.vercel.app/api/posts', {
                 method: 'DELETE',
                 body: postId,
+                headers:{"Content-Type" : "application/json"}
             });
 
             // reset the deleting state
@@ -31,7 +32,8 @@ function blog() {
   useLayoutEffect(() => {
       const fetchPost = async () => {
         try {
-          const  {data}  = await axios.get(`/api/${pid}`);
+          const  {data}  = await axios.get(`https://nextjs-blog-rarp2h943-jubair-18.vercel.app/api/${pid}`,
+            {headers:{"Content-Type" : "application/json"}});
           setPost(data.data)
         } catch (err) {
          alert(err);

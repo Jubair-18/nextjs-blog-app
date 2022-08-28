@@ -18,9 +18,10 @@ function login() {
             password
         };
         // save the post
-        let response = await fetch('/api/login', {
+        let response = await fetch('https://nextjs-blog-rarp2h943-jubair-18.vercel.app/api/login', {
             method: 'POST',
             body: JSON.stringify(user),
+            headers:{"Content-Type" : "application/json"}
         });
   
         // get the data
